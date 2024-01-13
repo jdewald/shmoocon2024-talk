@@ -20,6 +20,8 @@ The [smuggling-demo](./smuggling-demo) directory contains Docker compose to run 
 
 `docker compose logs -f backend` you'll see that the requests to `secret.foo.local` are in fact going through.
 
+You also almost certainly need to edit `config/backend/sites/secret.conf` to correspond to your docker network subnet. 
+
 ### Asciinema captures of routing demos
 
 
