@@ -1,0 +1,15 @@
+POST /upload HTTP/1.1
+Host: foo.local
+User-Agent: set
+Content-Length: 92 
+Connection: Content-Length
+
+GET / HTTP/1.1
+Host: secret.foo.local
+User-Agent: secret
+X-Forwarded-For: 10.42.42.42
+
+GET /secretstore HTTP/1.1
+Host: foo.local
+User-Agent: fetch
+

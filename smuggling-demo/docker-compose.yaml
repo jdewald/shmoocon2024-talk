@@ -1,0 +1,37 @@
+# vim: set expandtab ts=2 sw=2:
+---
+  frontend:
+    image: varnish:7.2.0-alpine
+    tmpfs:
+      - /var/lib/varnish/varnishd:exec
+    ports:
+      - "8080:80"
+    volumes:
+      - type: bind
+        source: ./config/frontend/default.vcl
+        target: /etc/varnish/default.vcl
+  backend:
+    image: nginx:1.25.3-bookworm
+#    image: nginx:1.17.6-alpine
+    ports:
+      - "9080:80"
+    configs:
+      - source: backend_nginx_conf
+        target: /etc/nginx/nginx.conf
+    volumes:
+      - type: bind
+        source: ./config/backend/sites
+        target: /etc/nginx/conf.d
+      - type: bind
+        source: ./config/backend/www
+        target: /etc/nginx/html
+
+
+configs:
+  frontend_vcl:
+    file: ./config/frontend/default.vcl
+  backend_nginx_conf:
+    file: ./config/backend/nginx.conf
+
+    
+
