@@ -4,6 +4,8 @@ Slides, etc from my 2024 Shmoocon talk on Network Layer Confusion
 ## Slides
 
 [Direct link YouTube video](https://youtu.be/_yqoVje68qU?si=fCjXcKXXPeGUg8BB&t=10375)
+
+
 [Google Slides version](https://docs.google.com/presentation/d/e/2PACX-1vRB0tTfIJbZfSe77xMniKhn2cqPwt0rvajW3AV4Pq2oIQufw90RujBEgJl5SLi-NQ/pub?start=false&loop=false&delayms=60000)
 
 These don't have the notes (I tried to make them just enhance what I was saying), but hopefully the diagrams are
