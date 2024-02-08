@@ -1,6 +1,7 @@
 # vim: set expandtab ts=2 sw=2:
 ---
   frontend:
+    # Vulnerable to CVE-2022-45059
     image: varnish:7.2.0-alpine
     tmpfs:
       - /var/lib/varnish/varnishd:exec
